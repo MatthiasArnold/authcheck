@@ -1,0 +1,29 @@
+<package xmlns="http://expath.org/ns/pkg" name="${package-name}"
+	abbrev="${project.artifactId}" version="${project.version}" spec="1.0">
+	<title>${package-title}</title>
+	<author id="cteodorescu">Claudius Teodorescu</author>
+	<website>${project.url}</website>
+	<license>GNU-LGPL</license>
+	<copyright>true</copyright>
+	<type>application</type>
+	<target>${project.artifactId}</target>
+	<finish>modules/install/post-install.xql</finish>
+	<status>stable</status>
+	<prepare>pre-install.xql</prepare>
+	<tag>authcheck</tag>
+	<tag>${package-type}</tag>
+	<tag>exist</tag>
+	<category id="libs">Libraries</category>
+	<category id="exist">eXist extensions</category>
+	<fileSets>
+		<fileSet>
+			<directory>${basedir}</directory>
+			<outputDirectory>/</outputDirectory>
+			<excludes>
+				<exclude>modules/build/</exclude>
+				<exclude>target/</exclude>
+				<exclude>pom.xml</exclude>
+			</excludes>
+		</fileSet>
+	</fileSets>
+</package>
