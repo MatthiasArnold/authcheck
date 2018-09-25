@@ -92,6 +92,8 @@ $(document).ready(function() {
                                 break;
                             case 'dnb':
                                 url = "http://services.dnb.de/sru/dnb?operation=searchRetrieve&amp;version=1.1&amp;query=" + id;
+                            case 'wikidata':
+                                url = "https://www.wikidata.org/wiki/" + id;                                
                             break;
                         }
                         var cellContent = '<div>' + idType + ': <span data-state="' + idState + '">' + decodedId[2] + ' ' + '</span><a href="' + url + '" target="_blank">' + id + '</a><br/>'
